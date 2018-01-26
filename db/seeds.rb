@@ -29,6 +29,9 @@
    )
  end
  
+ my_post = Post.find_or_create_by!(title: "Mike's special post!", body: "lookit me so speschul ^ u ^")
+ Comment.find_or_create_by!(body: "THIS POST IS NOTHING SPECIAL 0/10", post: my_post)
+ 
  puts "Seed finished"
  puts "#{Post.count} posts created"
  puts "#{Comment.count} comments created"
